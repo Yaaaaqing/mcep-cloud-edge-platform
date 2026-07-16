@@ -13,7 +13,7 @@
 
 ## 安装与运行
 
-需要 Node.js 20.19 或更高版本，推荐使用 pnpm 11.9.0。
+需要 Node.js 22.13 或更高版本，推荐使用 pnpm 11.9.0。
 
 ```bash
 npm install
