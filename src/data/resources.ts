@@ -1,0 +1,40 @@
+import type { DataResource } from '../types'
+
+export const initialResources: DataResource[] = [
+  {
+    id: 'data-001',
+    name: '主轴温升试验数据集',
+    source: '主轴热特性分析工具',
+    type: 'CSV文件',
+    updateMode: '试验完成后人工上传',
+    volume: '2.8 万条 / 12.6 MB',
+    updatedAt: '2026-07-15 15:32',
+    organization: '流控所',
+    permission: '项目成员可见',
+    description: '记录主轴不同转速工况下的温度、振动、负载及采样时间，用于热稳定性分析。',
+  },
+  {
+    id: 'data-002',
+    name: '数控系统配置清单',
+    source: '数控系统配置清单管理平台',
+    type: '结构化数据',
+    updateMode: '业务操作实时更新',
+    volume: '4,286 条记录',
+    updatedAt: '2026-07-15 16:20',
+    organization: '流控所',
+    permission: '授权用户可见',
+    description: '按产品型号管理数控系统硬件、软件、参数包和交付版本信息。',
+  },
+  {
+    id: 'data-003',
+    name: '装配质量评价结果',
+    source: '机床装配质量评价系统',
+    type: '接口数据',
+    updateMode: '每日批量同步',
+    volume: '1,356 条评价记录',
+    updatedAt: '2026-07-14 10:35',
+    organization: '数科公司',
+    permission: '责任单位可见',
+    description: '汇总装配质量评价得分、异常项、整改状态和复核结论。',
+  },
+]
