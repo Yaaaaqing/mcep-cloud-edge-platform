@@ -8,6 +8,7 @@ const styles: Record<string, string> = {
   已接入: 'bg-slate-100 text-ink ring-ink/10',
   云端已部署: 'bg-cyan-50 text-cyan-700 ring-cyan-600/10',
   联调中: 'bg-blue-50 text-brand ring-brand/10',
+  试运行: 'bg-cyan-50 text-cyan-700 ring-cyan-600/10',
   持续推进: 'bg-blue-50 text-brand ring-brand/10',
   正在推进: 'bg-blue-50 text-brand ring-brand/10',
   按计划推进: 'bg-blue-50 text-brand ring-brand/10',
@@ -22,6 +23,9 @@ const styles: Record<string, string> = {
   异常: 'bg-red-50 text-red-700 ring-red-600/10',
   未接入: 'bg-slate-100 text-slate-600 ring-slate-500/10',
   待检查: 'bg-amber-50 text-amber-700 ring-amber-600/10',
+  已入库: 'bg-slate-100 text-ink ring-ink/10',
+  可预览: 'bg-blue-50 text-brand ring-brand/10',
+  元数据待核验: 'bg-amber-50 text-amber-700 ring-amber-600/10',
 }
 
 export function StatusBadge({ status, icon }: { status: string; icon?: ReactNode }) {

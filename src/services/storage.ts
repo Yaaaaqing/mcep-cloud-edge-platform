@@ -37,6 +37,7 @@ const defaults: DataMap = {
 }
 
 const prefix = 'mcep:'
+const schemaVersion = 3
 
 const legacyStatusMap: Record<string, Pick<PlatformApp, 'accessStatus' | 'operationStatus'>> = {
   业务运营中: { accessStatus: '已接入', operationStatus: '业务运营中' },
@@ -83,14 +84,36 @@ function migrate<K extends keyof DataMap>(key: K, value: DataMap[K]): DataMap[K]
   return value
 }
 
+function upgradeSeedData<K extends keyof DataMap>(key: K, value: DataMap[K]): DataMap[K] {
+  if (key === 'apps' && Array.isArray(value)) {
+    const appSix = initialApps.find((item) => item.id === 'app-006')!
+    return value.map((item) => item.id === appSix.id ? {
+      ...item,
+      accessStatus: appSix.accessStatus,
+      operationStatus: appSix.operationStatus,
+      deployment: appSix.deployment,
+    } : item) as DataMap[K]
+  }
+  if (key === 'resources' && Array.isArray(value)) {
+    const saved = value as DataResource[]
+    const seeded = initialResources.map((initial) => ({ ...initial, ...(saved.find((item) => item.id === initial.id) ?? {}) }))
+    const custom = saved.filter((item) => !initialResources.some((initial) => initial.id === item.id))
+    return [...seeded, ...custom] as DataMap[K]
+  }
+  return value
+}
+
 function read<K extends keyof DataMap>(key: K): DataMap[K] {
   try {
     const saved = localStorage.getItem(prefix + key)
     const parsed = saved ? (JSON.parse(saved) as DataMap[K]) : clone(defaults[key])
-    const migrated = migrate(key, parsed)
+    const migrationKey = `${prefix}schema:${key}`
+    const needsSeedUpgrade = Number(localStorage.getItem(migrationKey) ?? 0) < schemaVersion
+    const migrated = needsSeedUpgrade ? upgradeSeedData(key, migrate(key, parsed)) : migrate(key, parsed)
     if (saved && JSON.stringify(parsed) !== JSON.stringify(migrated)) {
       localStorage.setItem(prefix + key, JSON.stringify(migrated))
     }
+    if (needsSeedUpgrade) localStorage.setItem(migrationKey, String(schemaVersion))
     return migrated
   } catch {
     return clone(defaults[key])

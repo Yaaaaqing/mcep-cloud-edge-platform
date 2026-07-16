@@ -13,10 +13,11 @@
 
 ## 安装与运行
 
-需要 Node.js 22.13 或更高版本，推荐使用 pnpm 11.9.0。
+需要 Node.js 22.13 或更高版本。仓库同时提供 npm 与 pnpm 锁文件，使用任一包管理器即可。
 
 ```bash
-npm install
+npm ci
+npm run generate:trace-data
 npm run dev
 ```
 
@@ -33,8 +34,11 @@ npm run preview
 
 ```bash
 pnpm install --frozen-lockfile
-pnpm build
+pnpm run generate:trace-data
+pnpm run build
 ```
+
+`npm run build` 会在构建前再次执行 Trace 数据生成与校验；若原始 XML 的哈希、记录数、时间范围、采样周期或信号统计不符合预期，构建会直接失败并给出错误。
 
 ## 路由
 
@@ -57,6 +61,7 @@ pnpm build
 - 演示管理端编辑保存在 localStorage，并通过统一数据变更事件同步到前台。
 - 五步接入申请自动保存草稿，提交后可下载 JSON 与 Markdown 接入清单。
 - 数据中心内置可下载 CSV Mock 文件，并使用 Recharts 进行折线图预览。
+- 数据中心接入原始 SINUMERIK Trace XML，提供概览、信号列表、分组曲线预览以及 XML、标准化 CSV、元数据 JSON 下载。
 - “恢复初始数据”可以清除本地编辑并回到初始 Mock 状态。
 
 ## 项目结构
@@ -65,8 +70,10 @@ pnpm build
 MCEP-web-frontend/
 ├── public/
 │   ├── brand/              # MCEP Symbol 品牌资源
+│   ├── data/               # 原始 Trace XML 与生成后的 JSON、CSV
 │   ├── mock/               # 可下载的 CSV 演示数据
 │   └── _redirects          # Netlify SPA 刷新兜底
+├── scripts/                # Trace 数据解析、复原与校验脚本
 ├── deploy/                 # Nginx SPA 配置示例
 ├── .github/workflows/      # GitHub Pages 自动部署
 ├── src/
@@ -85,6 +92,8 @@ MCEP-web-frontend/
 ## 数据与演示说明
 
 当前监测状态为可编辑的 Mock 台账，不代表真实实时监控结果；规划接入应用不配置虚假业务链接；边缘节点以规划建设中、待部署和待接入状态为主。
+
+`public/data/raw/X_BK300_1.xml` 是保留原样的源文件。运行 `npm run generate:trace-data` 会生成摘要、降采样图表预览和完整标准化 CSV；图表预览数据经过降采样，下载 CSV 保留全部 7,199 个时间点和 10 路前值复原信号。
 
 浏览器保存键统一使用 `mcep:` 前缀。若要切换到真实后端，可保留页面和组件层，将 `src/services/storage.ts` 替换为 API 请求实现。
 

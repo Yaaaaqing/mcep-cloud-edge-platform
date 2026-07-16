@@ -35,6 +35,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Generate SINUMERIK trace data
+        run: pnpm run generate:trace-data
+
       - name: Build for GitHub Pages
         run: pnpm exec tsc -b && pnpm exec vite build --base="/${{ github.event.repository.name }}/"
 

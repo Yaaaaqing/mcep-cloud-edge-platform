@@ -1,0 +1,239 @@
+{
+  "resourceId": "sinumerik-x-bk300-1",
+  "sourceFile": "X_BK300_1.xml",
+  "fileSizeBytes": 1019318,
+  "fileSizeLabel": "995.4 KiB",
+  "sha256": "5fc5b961c0fe810c7683a3f0ff64829a2a782da77b315e8547320bc596302d09",
+  "traceVersion": "01.00.03.02",
+  "sessionName": "BK240_1",
+  "captureTime": "2026-06-03T17:57:40.613Z",
+  "domain": "NCU_1",
+  "axisAddress": "u1, 1",
+  "axisLabel": "X（来自文件名）",
+  "durationSeconds": 14.396,
+  "samplingIntervalSeconds": 0.002,
+  "samplingRateHz": 500,
+  "frameCount": 1,
+  "signalCount": 10,
+  "recordCount": 7199,
+  "reconstructedPointCount": 71990,
+  "dropOuts": 0,
+  "sparseRecordCount": 7003,
+  "inheritedValueCount": 19375,
+  "signals": [
+    {
+      "id": "f1",
+      "key": "s1",
+      "label": "位置设定值",
+      "description": "Position setpoint (64 bit)",
+      "name": "/Nck/!SD/nckServoDataCmdPos2ndEnc64 [u1, 1]",
+      "unitsType": "posn",
+      "captureUnitsType": "posn",
+      "domain": "NCU_1",
+      "dataType": "double",
+      "interval": 0.002,
+      "datapointCount": 7199
+    },
+    {
+      "id": "f2",
+      "key": "s2",
+      "label": "测量系统1位置实际值",
+      "description": "Position actual value meas.system 1 (64 bit)",
+      "name": "/Nck/!SD/nckServoDataActPos1stEnc64 [u1, 1]",
+      "unitsType": "posn",
+      "captureUnitsType": "posn",
+      "domain": "NCU_1",
+      "dataType": "double",
+      "interval": 0.002,
+      "datapointCount": 7199
+    },
+    {
+      "id": "f3",
+      "key": "s3",
+      "label": "测量系统2位置实际值",
+      "description": "Position actual value meas.system 2 (64 bit)",
+      "name": "/Nck/!SD/nckServoDataActPos2ndEnc64 [u1, 1]",
+      "unitsType": "posn",
+      "captureUnitsType": "posn",
+      "domain": "NCU_1",
+      "dataType": "double",
+      "interval": 0.002,
+      "datapointCount": 7199
+    },
+    {
+      "id": "f4",
+      "key": "s4",
+      "label": "速度控制器输入设定值",
+      "description": "Velocity setpoint controller input (64 bit)",
+      "name": "/Nck/!SD/nckServoDataCmdVelCtrlIn64 [u1, 1]",
+      "unitsType": "velo",
+      "captureUnitsType": "velo",
+      "domain": "NCU_1",
+      "dataType": "double",
+      "interval": 0.002,
+      "datapointCount": 7199
+    },
+    {
+      "id": "f5",
+      "key": "s5",
+      "label": "测量系统1速度实际值",
+      "description": "Velocity act. value meas. system 1 (64 bit)",
+      "name": "/Nck/!SD/nckServoDataActVel1stEnc64 [u1, 1]",
+      "unitsType": "velo",
+      "captureUnitsType": "velo",
+      "domain": "NCU_1",
+      "dataType": "double",
+      "interval": 0.002,
+      "datapointCount": 7199
+    },
+    {
+      "id": "f6",
+      "key": "s6",
+      "label": "测量系统2速度实际值",
+      "description": "Velocity act. value meas. system 2 (64 bit)",
+      "name": "/Nck/!SD/nckServoDataActVel2ndEnc64 [u1, 1]",
+      "unitsType": "velo",
+      "captureUnitsType": "velo",
+      "domain": "NCU_1",
+      "dataType": "double",
+      "interval": 0.002,
+      "datapointCount": 7199
+    },
+    {
+      "id": "f7",
+      "key": "s7",
+      "label": "控制偏差",
+      "description": "Control deviation (64 bit)",
+      "name": "/Nck/!SD/nckServoDataCtrlDev64 [u1, 1]",
+      "unitsType": "posn",
+      "captureUnitsType": "posn",
+      "domain": "NCU_1",
+      "dataType": "double",
+      "interval": 0.002,
+      "datapointCount": 7199
+    },
+    {
+      "id": "f8",
+      "key": "s8",
+      "label": "驱动负载率",
+      "description": "Load (m_set/m_set,limit) (64 bit)",
+      "name": "/Nck/!SD/nckServoDataDrvLoad64 [u1, 1]",
+      "unitsType": "percent",
+      "captureUnitsType": "percent",
+      "domain": "NCU_1",
+      "dataType": "double",
+      "interval": 0.002,
+      "datapointCount": 7199
+    },
+    {
+      "id": "f9",
+      "key": "s9",
+      "label": "转矩形成电流实际值 i(q)",
+      "description": "Torque-prod. Current act. Val. i(q) (64 bit)",
+      "name": "/Nck/!SD/nckServoDataActCurr64 [u1, 1]",
+      "unitsType": "current",
+      "captureUnitsType": "current",
+      "domain": "NCU_1",
+      "dataType": "double",
+      "interval": 0.002,
+      "datapointCount": 7199
+    },
+    {
+      "id": "f10",
+      "key": "s10",
+      "label": "转矩/力设定值",
+      "description": "Torque / force setpoint (limited) (64 bit)",
+      "name": "/Nck/!SD/nckServoDataCmdTorque64 [u1, 1]",
+      "unitsType": "611DTime1",
+      "captureUnitsType": "torque",
+      "domain": "NCU_1",
+      "dataType": "double",
+      "interval": 0.002,
+      "datapointCount": 7199
+    }
+  ],
+  "statistics": [
+    {
+      "id": "f1",
+      "label": "位置设定值",
+      "minimum": -300.03,
+      "maximum": -300,
+      "mean": -300.01425197944167
+    },
+    {
+      "id": "f2",
+      "label": "测量系统1位置实际值",
+      "minimum": -1100.205965,
+      "maximum": -1100.172625,
+      "mean": -1100.188558869977
+    },
+    {
+      "id": "f3",
+      "label": "测量系统2位置实际值",
+      "minimum": -300.030338,
+      "maximum": -299.999684,
+      "mean": -300.01418720183347
+    },
+    {
+      "id": "f4",
+      "label": "速度控制器输入设定值",
+      "minimum": -7.18125,
+      "maximum": 7.18125,
+      "mean": -9.962551380856385e-18
+    },
+    {
+      "id": "f5",
+      "label": "测量系统1速度实际值",
+      "minimum": -23.031235,
+      "maximum": 48.923492,
+      "mean": 0.003020383247673169
+    },
+    {
+      "id": "f6",
+      "label": "测量系统2速度实际值",
+      "minimum": -13.769531,
+      "maximum": 52.148437,
+      "mean": 0.00004069120711194861
+    },
+    {
+      "id": "f7",
+      "label": "控制偏差",
+      "minimum": -0.012012,
+      "maximum": 0.000824,
+      "mean": -0.00006478399777746921
+    },
+    {
+      "id": "f8",
+      "label": "驱动负载率",
+      "minimum": 0.006104,
+      "maximum": 4.650879,
+      "mean": 2.512767958605364
+    },
+    {
+      "id": "f9",
+      "label": "转矩形成电流实际值 i(q)",
+      "minimum": -2.508911,
+      "maximum": 1.966187,
+      "mean": -0.32388587484372655
+    },
+    {
+      "id": "f10",
+      "label": "转矩/力设定值",
+      "minimum": -4.465862,
+      "maximum": 3.584553,
+      "mean": -0.5761272229476349
+    }
+  ],
+  "basicFeatures": {
+    "movementPulseCount": 60,
+    "negativePulseCount": 30,
+    "positivePulseCount": 30,
+    "pulseStartIntervalMedianSeconds": 0.22799999999999976,
+    "positionSetpointRange": 0.029999999999972715
+  },
+  "qualityNotes": [
+    "文件名为 X_BK300_1.xml，但文件内部 sessionName 为 BK240_1，文件标识与会话标识不一致，需后续核验。",
+    "f10 在采集配置中定义为 torque，但 traceData/dataSignal 中的 unitsType 为 611DTime1；当前保留原始字段，不擅自修改单位。",
+    "当前只展示源数据和基础统计，未形成机床性能合格或不合格结论。"
+  ]
+}

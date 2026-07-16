@@ -11,11 +11,10 @@ export function Header() {
   const [messagesOpen, setMessagesOpen] = useState(false)
   return (
     <header className="sticky top-0 z-50 border-b border-line/90 bg-white/90 backdrop-blur-xl">
-      <div className="page-shell flex h-[72px] items-center gap-2 xl:gap-4 2xl:h-[76px] 2xl:gap-7">
-        <NavLink to="/" className="flex shrink-0 items-center gap-2 xl:gap-3" aria-label="MCEP 首页">
-          <img src={`${import.meta.env.BASE_URL}brand/mcep-logo-dark.png`} alt="MCEP 高端机床云边协同应用平台" className="hidden h-11 w-auto max-w-[290px] object-contain 2xl:block" />
-          <img src={`${import.meta.env.BASE_URL}brand/mcep-symbol.png`} alt="" className="h-8 w-11 object-contain xl:h-9 xl:w-14 2xl:hidden" />
-          <strong className="text-base tracking-[.08em] text-ink xl:text-lg 2xl:hidden">MCEP</strong>
+      <div className="page-shell flex h-[70px] items-center gap-2 xl:gap-4 2xl:gap-6">
+        <NavLink to="/" className="flex shrink-0 items-center gap-2.5 xl:gap-3" aria-label="MCEP 首页">
+          <img src={`${import.meta.env.BASE_URL}brand/mcep-symbol.png`} alt="" className="h-auto w-12 object-contain xl:w-[58px]" />
+          <strong className="text-xl font-bold tracking-[.04em] text-ink xl:text-2xl">MCEP</strong>
         </NavLink>
         <nav className="flex min-w-0 flex-1 items-center justify-center gap-0.5 xl:gap-1">
           {navItems.map(([path, label]) => (

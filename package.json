@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "generate:trace-data": "node scripts/generate-sinumerik-trace-data.mjs",
+    "prebuild": "node scripts/generate-sinumerik-trace-data.mjs",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint ."

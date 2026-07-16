@@ -8,6 +8,10 @@ export const deliveryRoadmap = [
   { title: '最终交付', date: '09.30 前' },
 ]
 
+export const platformTargets = {
+  plannedEdgeNodeCount: 6,
+}
+
 export const templateItems = ['应用上云信息确认表', '部署环境确认表', '网络策略申请表', '统一认证申请表', '数据库申请表', '接口信息确认表', '测试验证记录表']
 
 export const responsibilityMatrix = [
