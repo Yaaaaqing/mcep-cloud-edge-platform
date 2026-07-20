@@ -26,6 +26,21 @@ const styles: Record<string, string> = {
   已入库: 'bg-slate-100 text-ink ring-ink/10',
   可预览: 'bg-blue-50 text-brand ring-brand/10',
   元数据待核验: 'bg-amber-50 text-amber-700 ring-amber-600/10',
+  元数据待补充: 'bg-amber-50 text-amber-700 ring-amber-600/10',
+  待评估: 'bg-amber-50 text-amber-700 ring-amber-600/10',
+  评估中: 'bg-blue-50 text-brand ring-brand/10',
+  可适配: 'bg-emerald-50 text-emerald-700 ring-emerald-600/10',
+  需要改造: 'bg-orange-50 text-orange-700 ring-orange-600/10',
+  不适合云端: 'bg-slate-100 text-slate-600 ring-slate-500/10',
+  演示数据: 'bg-blue-50 text-brand ring-brand/10',
+  待接入自动监测: 'bg-amber-50 text-amber-700 ring-amber-600/10',
+  运行中: 'bg-emerald-50 text-emerald-700 ring-emerald-600/10',
+  已停止: 'bg-slate-100 text-slate-600 ring-slate-500/10',
+  待开通: 'bg-blue-50 text-brand ring-brand/10',
+  未知: 'bg-slate-100 text-slate-600 ring-slate-500/10',
+  验证通过: 'bg-emerald-50 text-emerald-700 ring-emerald-600/10',
+  待验证: 'bg-amber-50 text-amber-700 ring-amber-600/10',
+  已确认: 'bg-emerald-50 text-emerald-700 ring-emerald-600/10',
 }
 
 export function StatusBadge({ status, icon }: { status: string; icon?: ReactNode }) {

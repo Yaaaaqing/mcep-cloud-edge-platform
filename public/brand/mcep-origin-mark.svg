@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="44" viewBox="0 0 220 44" role="img" aria-labelledby="title desc">
+  <title id="title">MCEP初始设计标记</title>
+  <desc id="desc">MCEP · YQ · 2026</desc>
+  <rect x="0.75" y="0.75" width="218.5" height="42.5" rx="12" fill="#F6F8FC" fill-opacity="0.8" stroke="#657185" stroke-opacity="0.55" stroke-width="1.5"/>
+  <path d="M16 29V15h3.2l4.8 7.2 4.8-7.2H32v14h-3.2v-8.7L24 27.2l-4.8-6.9V29H16Z" fill="#246BFD"/>
+  <path d="M39 15h11v3H42.2v8H50v3H39V15Zm18 0h12v3H60.2v2.5H68v3h-7.8V26H69v3H57V15Zm17 0h7.4c3.9 0 6.6 2.2 6.6 5.7 0 3.6-2.7 5.8-6.6 5.8h-4.2V29H74V15Zm3.2 3v5.5h4c2.2 0 3.5-.9 3.5-2.8 0-1.8-1.3-2.7-3.5-2.7h-4Z" fill="#0B1F3A"/>
+  <circle cx="101" cy="22" r="2.2" fill="#24CDE3"/>
+  <text x="113" y="27" fill="#0B1F3A" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">YQ</text>
+  <circle cx="146" cy="22" r="2.2" fill="#24CDE3"/>
+  <text x="158" y="27" fill="#657185" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="600" letter-spacing="0.8">2026</text>
+</svg>

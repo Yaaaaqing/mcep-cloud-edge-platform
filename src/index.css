@@ -18,9 +18,9 @@ button { cursor: pointer; }
 ::selection { background: rgba(36, 107, 253, .18); }
 
 @layer components {
-  .page-shell { @apply mx-auto w-full max-w-[1680px] px-6 xl:px-8 2xl:px-12; }
+  .page-shell { @apply mx-auto w-full max-w-[1680px] px-4 sm:px-6 xl:px-8 2xl:px-12; }
   .card { @apply rounded-card border border-line bg-white shadow-card; }
-  .section-title { @apply text-2xl font-semibold tracking-tight text-ink; }
+  .section-title { @apply text-xl font-semibold tracking-tight text-ink sm:text-2xl; }
   .section-kicker { @apply mb-2 text-xs font-semibold uppercase tracking-[.18em] text-brand; }
   .input { @apply h-11 w-full rounded-xl border border-line bg-white px-3.5 text-sm text-text outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10; }
   .textarea { @apply min-h-24 w-full resize-y rounded-xl border border-line bg-white px-3.5 py-3 text-sm text-text outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10; }
@@ -39,3 +39,14 @@ button { cursor: pointer; }
 
 .thin-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
 .thin-scrollbar::-webkit-scrollbar-thumb { background: #cad4e4; border-radius: 999px; }
+
+@media (max-width: 639px) {
+  .access-wizard .grid-cols-2 { grid-template-columns: minmax(0, 1fr); }
+  .access-wizard .col-span-2 { grid-column: auto; }
+  .access-wizard > .mt-6.flex { align-items: stretch; flex-direction: column; gap: 1rem; }
+  .access-wizard > .mt-6.flex > .flex { flex-wrap: wrap; justify-content: flex-end; }
+}
+
+@media (max-width: 767px) {
+  [class~="grid-cols-[210px_minmax(0,1fr)]"] { grid-template-columns: minmax(0, 1fr); }
+}

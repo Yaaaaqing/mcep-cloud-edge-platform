@@ -3,3 +3,11 @@ dist
 .DS_Store
 *.local
 .gh-config
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+*.temp
+config/private/cloud-resources.local.json
+outputs/

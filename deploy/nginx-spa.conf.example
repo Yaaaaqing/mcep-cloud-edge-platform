@@ -1,11 +1,22 @@
 server {
     listen 80;
-    server_name example.com;
+    server_name ybxt.gt.cn;
 
-    root /var/www/mcep/dist;
+    # 将 npm run build 生成的 dist 内容部署到 /var/www/html/mcep/。
+    root /var/www/html;
     index index.html;
 
-    location / {
-        try_files $uri $uri/ /index.html;
+    location = /mcep {
+        return 301 /mcep/;
     }
+
+    # BrowserRouter 子路由刷新统一回退到 /mcep/index.html。
+    location /mcep/ {
+        try_files $uri $uri/ /mcep/index.html;
+    }
+
+    # 后续接入真实后端时再启用并替换 upstream；当前前端不包含后端服务。
+    # location /mcep/api/ {
+    #     proxy_pass http://mcep_api/;
+    # }
 }

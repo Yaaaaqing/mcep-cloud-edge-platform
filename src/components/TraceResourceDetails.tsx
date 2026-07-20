@@ -116,7 +116,7 @@ export function TraceResourceDetails({ resource }: { resource: DataResource }) {
       {!summary && !loadError && <div className="py-14 text-center text-sm text-muted">正在读取预处理 Trace 数据…</div>}
       {summary && activeTab === '数据概览' && <div>
         <p className="max-w-4xl text-sm leading-7 text-text">{resource.description}</p>
-        <dl className="mt-6 grid grid-cols-2 gap-3 xl:grid-cols-3 2xl:grid-cols-4">
+        <dl className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           <Metric label="来源系统" value={resource.source} /><Metric label="文件名称" value={summary.sourceFile} /><Metric label="会话名称" value={summary.sessionName} /><Metric label="采集时间" value={summary.captureTime} />
           <Metric label="数据域" value={summary.domain} /><Metric label="轴地址" value={summary.axisAddress} /><Metric label="持续时间" value={`${summary.durationSeconds} 秒`} /><Metric label="采样周期" value={`${summary.samplingIntervalSeconds} 秒`} />
           <Metric label="采样率" value={`${summary.samplingRateHz} Hz`} /><Metric label="信号数量" value={`${summary.signalCount} 路`} /><Metric label="记录数量" value={`${summary.recordCount.toLocaleString('zh-CN')} 条`} /><Metric label="掉点数量" value={summary.dropOuts} />
@@ -135,7 +135,7 @@ export function TraceResourceDetails({ resource }: { resource: DataResource }) {
       </div>}
       {summary && activeTab === '文件信息' && <div>
         <div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-xl bg-brand/10 text-brand"><FileCode2 size={21} /></span><div><h3 className="font-semibold text-ink">原始文件与标准化输出</h3><p className="mt-1 text-sm text-muted">文件均由同一份只读 XML 生成，可直接下载核验。</p></div></div>
-        <dl className="mt-6 grid grid-cols-2 gap-3"><Metric label="文件名" value={summary.sourceFile} /><Metric label="文件大小" value={`${summary.fileSizeLabel}（${summary.fileSizeBytes.toLocaleString('zh-CN')} 字节）`} /><Metric label="XML Trace 版本" value={summary.traceVersion} /><Metric label="重建数据点" value={summary.reconstructedPointCount.toLocaleString('zh-CN')} /></dl>
+        <dl className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2"><Metric label="文件名" value={summary.sourceFile} /><Metric label="文件大小" value={`${summary.fileSizeLabel}（${summary.fileSizeBytes.toLocaleString('zh-CN')} 字节）`} /><Metric label="XML Trace 版本" value={summary.traceVersion} /><Metric label="重建数据点" value={summary.reconstructedPointCount.toLocaleString('zh-CN')} /></dl>
         <div className="mt-4 rounded-xl border border-line bg-canvas/35 p-4"><p className="text-xs text-muted">SHA-256</p><p className="mt-2 break-all font-mono text-xs leading-6 text-ink">{summary.sha256}</p></div>
         <div className="mt-6 flex flex-wrap gap-3"><DownloadLink href={rawXmlUrl}>下载原始 XML</DownloadLink><DownloadLink href={csvUrl}>下载标准化 CSV</DownloadLink><DownloadLink href={summaryUrl}>下载元数据 JSON</DownloadLink></div>
       </div>}

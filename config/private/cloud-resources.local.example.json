@@ -1,0 +1,14 @@
+{
+  "cloudResources": [
+    {
+      "id": "cloud-vm-20-2",
+      "internalIp": "<完整内网IP，仅本地保存>",
+      "applicant": "<申请人>",
+      "owner": "<资源责任人>",
+      "purpose": "<核实后的实际用途>",
+      "relatedAppId": "app-001",
+      "confirmed": true,
+      "remark": "<不应提交到公开仓库的内部备注>"
+    }
+  ]
+}
