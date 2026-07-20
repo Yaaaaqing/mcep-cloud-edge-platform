@@ -39,7 +39,11 @@ jobs:
         run: pnpm run generate:trace-data
 
       - name: Build for GitHub Pages
-        run: pnpm exec tsc -b && pnpm exec vite build --base="/${{ github.event.repository.name }}/"
+        env:
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_DATA_MODE: mock
+          VITE_GIT_COMMIT: ${{ github.sha }}
+        run: pnpm run build
 
       - name: Add SPA fallback
         run: cp dist/index.html dist/404.html

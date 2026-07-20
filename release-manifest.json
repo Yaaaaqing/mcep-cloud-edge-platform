@@ -1,0 +1,61 @@
+{
+  "applicationName": "MCEP高端机床云边协同应用平台",
+  "version": "1.0.0",
+  "gitCommit": "15ab8f29f4222aa28d12d9094ea34da7f826365e",
+  "generatedAt": "2026-07-20T06:03:30.384Z",
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "08241fda216991c390a4b801e5ac3e865580ca4dd2ee2dcbca1aa12de1943ccd"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "4b1ef151e7a360ebfe8c413f99e556b9c3e709636c626ef2363ea5d9c082c2f9"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a24a722ecc45165c2656e3868bb7e99b3e0d8a675a21190e98376aafd344bc5b"
+    },
+    {
+      "path": "CONTRIBUTORS.md",
+      "sha256": "23aafaf4e84ba8fb516e2bc6f09ef0c3a7c362dd7b6e3b59571bc3879c81a223"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "05796b2b08a53008928aa297b97af8043811b6cfefd51bd05deeb395b0060491"
+    },
+    {
+      "path": "src/App.tsx",
+      "sha256": "1f4738eba2fe8ea79da4569e711ef379467b4bd8e996c7f5e37e7290a1f40218"
+    },
+    {
+      "path": "src/types/index.ts",
+      "sha256": "acdcacc9b92539fcb0a7c6836a261786fcd6cc9f3003914a692a964c0616176f"
+    },
+    {
+      "path": "src/services/storage.ts",
+      "sha256": "b30a250e3a6d62c6ea621720178981ab7270ccaacb4b408650d62ec438cb3d2a"
+    },
+    {
+      "path": "src/services/providers/DataProvider.ts",
+      "sha256": "4b47bf10c87215deb49c7500a2d839d556ce3e4d2166959dbce64521e851c4a4"
+    },
+    {
+      "path": "src/services/providers/MockDataProvider.ts",
+      "sha256": "2fc4fb92c39e37c14c35294d214b01146660a3d1909461b83c764b42044cfd22"
+    },
+    {
+      "path": "src/services/providers/HttpDataProvider.ts",
+      "sha256": "8fde8dd2b1a8aa61ebe20c4b1e19f9cf2c2574ec1981a78589fa15a39e8348d0"
+    },
+    {
+      "path": "docs/MCEP-frontend-handover.md",
+      "sha256": "1e5aa344836d6e740d7cf6871ec6d161764f53d2f7cd5be3dabaa83197c39e9f"
+    },
+    {
+      "path": "public/brand/mcep-origin-mark.svg",
+      "sha256": "0bd8ed8a8a0df64930ca0f10bd3e12565996489e7f5dac571e0205cb31ad1079"
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 import type { DocumentRecord, HomeContent, UserRecord } from '../types'
 
 export const deliveryRoadmap = [
-  { title: '流程固化', date: '06.30 前' },
-  { title: '试点部署', date: '07.31 前' },
-  { title: '边缘节点管理', date: '08.31 前' },
-  { title: '数据展示验证', date: '09.15 前' },
-  { title: '最终交付', date: '09.30 前' },
+  { title: '平台工程化', date: '持续收口' },
+  { title: '软件技术评估', date: '分批推进' },
+  { title: '云端与边缘部署', date: '按条件实施' },
+  { title: '数据成果集成', date: '目录化接入' },
+  { title: '生产验收与运营', date: '待正式环境验证' },
 ]
 
 export const templateItems = ['应用上云信息确认表', '部署环境确认表', '网络策略申请表', '统一认证申请表', '数据库申请表', '接口信息确认表', '测试验证记录表']
